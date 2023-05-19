@@ -47,7 +47,7 @@ class PlayViewModel: ObservableObject {
       .receive(on: DispatchQueue.main)
       .sink(receiveValue: {[weak self] classificationResults in
         guard let _classificationResults: [VNClassificationObservation] = classificationResults else {
-          self?.classificationLabels = ["Loading..."]
+          self?.classificationLabels = ["분석중..."]
           return
         }
         

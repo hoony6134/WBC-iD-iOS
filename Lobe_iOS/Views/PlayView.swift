@@ -9,6 +9,7 @@ struct PlayView: View {
   
   @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
   @ObservedObject var viewModel: PlayViewModel
+  @State private var showAlert = false
   
   init(viewModel: PlayViewModel) {
     self.viewModel = viewModel
@@ -17,6 +18,40 @@ struct PlayView: View {
   var body: some View {
     GeometryReader { geometry in
       VStack {
+        HStack {
+          Image(systemName: "lasso.and.sparkles")
+            .font(.system(size: 16, weight: .heavy))
+            .foregroundColor(.white)
+            .padding(.leading, 30)
+            .padding(.top, 70)
+          Text("WBC iD")
+            .font(.title)
+            .fontWeight(.bold)
+            .foregroundColor(.white)
+            .multilineTextAlignment(.center)
+            .padding(.top, 70)
+            Text("by Cyan")
+                .font(.system(size:13))
+              .fontWeight(.light)
+              .foregroundColor(.white)
+              .multilineTextAlignment(.trailing)
+              .padding(.top, 70)
+          Spacer()
+          VStack {
+            Button(action: {
+              self.showAlert.toggle()
+            }) {
+                Image(systemName: "info.circle")
+                    .font(.system(size: 16, weight: .light))
+                    .padding(.top, 70)
+                    .padding(.trailing, 30)
+                    .foregroundColor(.white)
+            }
+            .alert(isPresented: $showAlert) {
+              Alert(title: Text("Welcome to WBC iD"), message: Text("백혈구 종류의 구분이 어려우신가요? 지금 WBC iD 앱에서 염색된 샘플의 광학 현미경 관찰 결과 사진만으로 종류를 손쉽게 확인하세요! (가장 가까운 것으로 보이는 3가지 종류와 확률(%)이 표시됩니다.)"), dismissButton: .default(Text("시작하기")))
+            }
+          }
+        }
         switch(self.viewModel.viewMode) {
         // Background camera view.
         case .Camera:
@@ -40,11 +75,11 @@ struct PlayView: View {
           
         // TO-DO: loading screen here
         case .NotLoaded:
-          Text("View Loading...")
+          Text("로드중...")
         }
       }
       .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)
-      .background(Color(UIColor(rgb: 0x333333)))
+      .background(Color(UIColor(rgb: 0x1A0006)))
       .edgesIgnoringSafeArea(.all)
 
       /// Show processed image that gets used for prediction.
@@ -69,7 +104,6 @@ struct PlayView: View {
       HStack(spacing: UIScreen.main.bounds.width - 80 - 44) {
         /// Photo picker button if in camera mode, else we show button to toggle to camera mode
         openPhotoPickerButton
-        
         if (self.viewModel.viewMode == .Camera) {
           rotateCameraButton
         } else {
@@ -131,14 +165,25 @@ extension PlayView {
   }
   
   /// Button for opening photo picker
-  var openPhotoPickerButton: some View {
-    Button(action: {
-      self.viewModel.showImagePicker.toggle()
-    }) {
-      Image("gallery")
+    var openPhotoPickerButton: some View {
+        Button(action: {
+            self.viewModel.showImagePicker.toggle()
+        }) {
+            Image("gallery")
+        }
     }
-  }
-  
+    
+//    var infoButton: some View {
+//      Button(action: {
+//        self.viewModel.showImagePicker.toggle()
+//      }) {
+//        Image(systemName: "info.circle")
+//      }
+//      .alert(isPresented: $showAlert) {
+//        Alert(title: Text("Info"), message: Text("This is some information."), dismissButton: .default(Text("OK")))
+//      }
+//    }
+
   /// Button for enabling camera mode
   var showCameraModeButton: some View {
     Button(action: {

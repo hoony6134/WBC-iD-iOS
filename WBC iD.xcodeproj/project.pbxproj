@@ -25,7 +25,7 @@
 		B55D41462599BB48007C9DBF /* CaptureSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55D41452599BB48007C9DBF /* CaptureSessionManager.swift */; };
 		B5A30D2E260960DE0097EED3 /* Prediction.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A30D2D260960DE0097EED3 /* Prediction.swift */; };
 		B5A9B5272557373E00FD595B /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5A9B5262557373E00FD595B /* CloudKit.framework */; };
-		B5B2D939260A4D5B00BABFAB /* LobeModel.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = B5B2D938260A4D5B00BABFAB /* LobeModel.mlmodel */; };
+		B5B2D939260A4D5B00BABFAB /* wbc.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = B5B2D938260A4D5B00BABFAB /* wbc.mlmodel */; };
 		B5BB1F6B2609AA73004AB6A2 /* PredictionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BB1F6A2609AA73004AB6A2 /* PredictionsView.swift */; };
 /* End PBXBuildFile section */
 
@@ -43,7 +43,7 @@
 		76CDE1A3247F2E6D0096E882 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; tabWidth = 2; };
 		76ED73F2248987E3003B4F6B /* CaptureSessionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptureSessionViewController.swift; sourceTree = "<group>"; };
 		76ED73F4248988AE003B4F6B /* PredictionLabelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PredictionLabelView.swift; sourceTree = "<group>"; };
-		9B7B03E72475DBF300D34020 /* Lobe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lobe.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9B7B03E72475DBF300D34020 /* WBC iD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WBC iD.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B7B03EA2475DBF300D34020 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9B7B03EC2475DBF300D34020 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		9B7B03EE2475DBF300D34020 /* PlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayView.swift; sourceTree = "<group>"; };
@@ -63,7 +63,7 @@
 		B5A30D2D260960DE0097EED3 /* Prediction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prediction.swift; sourceTree = "<group>"; };
 		B5A9B5232557372800FD595B /* Lobe.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Lobe.entitlements; sourceTree = "<group>"; };
 		B5A9B5262557373E00FD595B /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
-		B5B2D938260A4D5B00BABFAB /* LobeModel.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = LobeModel.mlmodel; sourceTree = "<group>"; };
+		B5B2D938260A4D5B00BABFAB /* wbc.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = wbc.mlmodel; sourceTree = "<group>"; };
 		B5BB1F6A2609AA73004AB6A2 /* PredictionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PredictionsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -90,7 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				9B7B03E92475DBF300D34020 /* Lobe_iOS */,
-				B5B2D938260A4D5B00BABFAB /* LobeModel.mlmodel */,
+				B5B2D938260A4D5B00BABFAB /* wbc.mlmodel */,
 				B513D84325809D62009D91E2 /* LobeTests */,
 				9B7B03E82475DBF300D34020 /* Products */,
 				B5A9B5252557373E00FD595B /* Frameworks */,
@@ -100,7 +100,7 @@
 		9B7B03E82475DBF300D34020 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				9B7B03E72475DBF300D34020 /* Lobe.app */,
+				9B7B03E72475DBF300D34020 /* WBC iD.app */,
 				B513D84225809D62009D91E2 /* LobeTests.xctest */,
 			);
 			name = Products;
@@ -176,9 +176,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		9B7B03E62475DBF300D34020 /* Lobe_iOS */ = {
+		9B7B03E62475DBF300D34020 /* WBC iD */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9B7B03FB2475DBF600D34020 /* Build configuration list for PBXNativeTarget "Lobe_iOS" */;
+			buildConfigurationList = 9B7B03FB2475DBF600D34020 /* Build configuration list for PBXNativeTarget "WBC iD" */;
 			buildPhases = (
 				9B7B03E32475DBF300D34020 /* Sources */,
 				9B7B03E42475DBF300D34020 /* Frameworks */,
@@ -188,9 +188,9 @@
 			);
 			dependencies = (
 			);
-			name = Lobe_iOS;
+			name = "WBC iD";
 			productName = Lobe_iOS;
-			productReference = 9B7B03E72475DBF300D34020 /* Lobe.app */;
+			productReference = 9B7B03E72475DBF300D34020 /* WBC iD.app */;
 			productType = "com.apple.product-type.application";
 		};
 		B513D84125809D62009D91E2 /* LobeTests */ = {
@@ -219,7 +219,7 @@
 			attributes = {
 				LastSwiftUpdateCheck = 1220;
 				LastUpgradeCheck = 1200;
-				ORGANIZATIONNAME = Microsoft;
+				ORGANIZATIONNAME = Scian;
 				TargetAttributes = {
 					9B7B03E62475DBF300D34020 = {
 						CreatedOnToolsVersion = 11.4.1;
@@ -230,7 +230,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 9B7B03E22475DBF300D34020 /* Build configuration list for PBXProject "Lobe_iOS" */;
+			buildConfigurationList = 9B7B03E22475DBF300D34020 /* Build configuration list for PBXProject "WBC iD" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -243,7 +243,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				9B7B03E62475DBF300D34020 /* Lobe_iOS */,
+				9B7B03E62475DBF300D34020 /* WBC iD */,
 				B513D84125809D62009D91E2 /* LobeTests */,
 			);
 		};
@@ -281,7 +281,7 @@
 				B55A1ED32574F368003EE8AD /* CameraView.swift in Sources */,
 				76CDE1A4247F2E6D0096E882 /* ImagePicker.swift in Sources */,
 				9B7B03ED2475DBF300D34020 /* SceneDelegate.swift in Sources */,
-				B5B2D939260A4D5B00BABFAB /* LobeModel.mlmodel in Sources */,
+				B5B2D939260A4D5B00BABFAB /* wbc.mlmodel in Sources */,
 				76ED73F5248988AE003B4F6B /* PredictionLabelView.swift in Sources */,
 				76ED73F3248987E3003B4F6B /* CaptureSessionViewController.swift in Sources */,
 				B55A1ED825760BAC003EE8AD /* PredictionLayer.swift in Sources */,
@@ -305,7 +305,7 @@
 /* Begin PBXTargetDependency section */
 		B513D84825809D62009D91E2 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 9B7B03E62475DBF300D34020 /* Lobe_iOS */;
+			target = 9B7B03E62475DBF300D34020 /* WBC iD */;
 			targetProxy = B513D84725809D62009D91E2 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -446,15 +446,16 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Lobe_iOS/Preview Content\"";
-				DEVELOPMENT_TEAM = UBF8T346G9;
+				DEVELOPMENT_TEAM = J9ZM2PBPP6;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Lobe_iOS/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.microsoft.lobe;
-				PRODUCT_NAME = Lobe;
+				PRODUCT_BUNDLE_IDENTIFIER = com.scian.wbcid;
+				PRODUCT_NAME = "WBC iD";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -469,15 +470,16 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Lobe_iOS/Preview Content\"";
-				DEVELOPMENT_TEAM = UBF8T346G9;
+				DEVELOPMENT_TEAM = J9ZM2PBPP6;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Lobe_iOS/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.microsoft.lobe;
-				PRODUCT_NAME = Lobe;
+				PRODUCT_BUNDLE_IDENTIFIER = com.scian.wbcid;
+				PRODUCT_NAME = "WBC iD";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -489,7 +491,7 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = UBF8T346G9;
+				DEVELOPMENT_TEAM = J9ZM2PBPP6;
 				INFOPLIST_FILE = LobeTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -510,7 +512,7 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = UBF8T346G9;
+				DEVELOPMENT_TEAM = J9ZM2PBPP6;
 				INFOPLIST_FILE = LobeTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -529,7 +531,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		9B7B03E22475DBF300D34020 /* Build configuration list for PBXProject "Lobe_iOS" */ = {
+		9B7B03E22475DBF300D34020 /* Build configuration list for PBXProject "WBC iD" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9B7B03F92475DBF600D34020 /* Debug */,
@@ -538,7 +540,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9B7B03FB2475DBF600D34020 /* Build configuration list for PBXNativeTarget "Lobe_iOS" */ = {
+		9B7B03FB2475DBF600D34020 /* Build configuration list for PBXNativeTarget "WBC iD" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9B7B03FC2475DBF600D34020 /* Debug */,

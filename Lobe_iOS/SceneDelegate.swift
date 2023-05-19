@@ -15,8 +15,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
     
     // Create the SwiftUI view that provides the window contents.
-    let modelUrl = LobeModel.urlOfModelInThisBundle
-    let model = try? LobeModel(contentsOf: modelUrl).model
+    let modelUrl = wbc.urlOfModelInThisBundle
+    let model = try? wbc(contentsOf: modelUrl).model
     let project = Project(mlModel: model)
     let viewModel = PlayViewModel(project: project)
     let view = PlayView(viewModel: viewModel)
@@ -26,7 +26,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
       let window = UIWindow(windowScene: windowScene)
       window.rootViewController = UIHostingController(rootView: view)
       self.window = window
-      self.window?.tintColor = UIColor(rgb: 0x00DDAD)
+      self.window?.tintColor = UIColor(rgb: 0xFF9999)
       window.makeKeyAndVisible()
     }
   }

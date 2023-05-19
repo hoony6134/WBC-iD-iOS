@@ -20,7 +20,7 @@ struct PredictionLabelView: View {
   
   init(prediction: Prediction?, isTopPrediction: Bool) {
     self.prediction = prediction
-    self.backgroundColor = isTopPrediction ? Color(UIColor(rgb: 0x00DDB3)) : Color.white
+    self.backgroundColor = isTopPrediction ? Color(UIColor(rgb: 0xFF9999)) : Color.white
     self.opacity = (prediction == nil) ? 0 : (isTopPrediction ? 1 : 0.2)
     self.paddingTop = isTopPrediction ? 16 : 0
   }
@@ -31,18 +31,55 @@ struct PredictionLabelView: View {
         HStack(alignment: .center) {
           ZStack (alignment: .leading) {
             // TODO: Add animations.
-            Rectangle()
+            ZStack (alignment: .leading) {
+              Rectangle()
               .frame(width: max(min(CGFloat(self.prediction?.confidence ?? 0) * geometry.size.width, geometry.size.width), 46))
               .foregroundColor(self.backgroundColor)
               .cornerRadius(23)
               .opacity(self.opacity)
               .animation(.spring())
-
-            Text(self.prediction?.label ?? "")
-              .font(.system(size: 32))
-              .fontWeight(.medium)
+              let tempPredictionLabel = self.prediction?.label ?? ""
+              if tempPredictionLabel=="Neutrophil"{
+                  Text("호중구")
+                    .font(.system(size: 32))
+                    .fontWeight(.medium)
+                    .foregroundColor(.white)
+                    .padding(.leading, 16)
+              }
+              if tempPredictionLabel=="Monocyte"{
+                  Text("단핵구")
+                    .font(.system(size: 32))
+                    .fontWeight(.medium)
+                    .foregroundColor(.white)
+                    .padding(.leading, 16)
+              }
+              if tempPredictionLabel=="Lymphocyte"{
+                  Text("림프구")
+                    .font(.system(size: 32))
+                    .fontWeight(.medium)
+                    .foregroundColor(.white)
+                    .padding(.leading, 16)
+              }
+              if tempPredictionLabel=="Eosinophil"{
+                  Text("호산구")
+                    .font(.system(size: 32))
+                    .fontWeight(.medium)
+                    .foregroundColor(.white)
+                    .padding(.leading, 16)
+              }
+              if tempPredictionLabel=="Basophil"{
+                  Text("호염구")
+                    .font(.system(size: 32))
+                    .fontWeight(.medium)
+                    .foregroundColor(.white)
+                    .padding(.leading, 16)
+              }
+              Spacer()
+              Text(String(format: "%.0f%%", (self.prediction?.confidence ?? 0) * 100))
+              .font(.system(size: 20))
               .foregroundColor(.white)
-              .padding(.leading, 16)
+              .padding(.leading, 115)
+            }
           }
         }
       }

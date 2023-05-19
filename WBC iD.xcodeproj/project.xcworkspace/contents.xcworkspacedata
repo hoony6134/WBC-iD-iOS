@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:Lobe_iOS.xcodeproj">
+      location = "self:/Users/jh/dev/WBC-identifier/iOS project example/WBC iD.xcodeproj">
    </FileRef>
 </Workspace>
