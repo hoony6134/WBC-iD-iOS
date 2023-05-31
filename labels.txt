@@ -1,0 +1,5 @@
+호염구 (Basophil)
+호산구 (Eosinophil)
+림프구 (Lymphocyte)
+단핵구 (Monocyte)
+호중구 (Neutrophil)
